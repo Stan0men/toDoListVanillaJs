@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+
+    <script>
+let toDoList = [];
+
+function addItem(arr){
+    let answer = prompt("What would you like to do today?");
+    let correct = answer.toLocaleLowerCase().trim();
+
+    if(checkDuplicate(arr, correct)){
+        arr.push(correct);
+    }else{
+        alert("Item already exist!")
+    }
+  
+}
+
+function checkDuplicate (arr, item){
+    let exists = false;
+    let index = arr.indexOf(item);
+    if(index != -1){
+        exists = false
+    }
+    else{
+        exists = true
+    }
+return exists;
+}
+
+addItem(toDoList);
+addItem(toDoList);
+addItem(toDoList);
+
+console.log(toDoList);
+    </script>
+</body>
+</html>
